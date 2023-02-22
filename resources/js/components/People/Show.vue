@@ -1,9 +1,9 @@
 <template>
     <div class="my-4" v-if="person">
-        <p>Имя: {{ this.person.name }}</p>
-        <p>Возраст: {{ this.person.age }}</p>
-        <p>Должность: {{ this.person.job }}</p>
-        <router-link :to="{ name: 'people.edit', params: { id: this.person.id }}" class="btn btn-outline-success">
+        <p>Имя: {{ person.name }}</p>
+        <p>Возраст: {{ person.age }}</p>
+        <p>Должность: {{ person.job }}</p>
+        <router-link :to="{ name: 'people.edit', params: { id: person.id }}" class="btn btn-outline-success">
             Редактировать
         </router-link>
     </div>
