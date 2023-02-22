@@ -3,7 +3,7 @@
         <p>Имя: {{ this.person.name }}</p>
         <p>Возраст: {{ this.person.age }}</p>
         <p>Должность: {{ this.person.job }}</p>
-        <router-link :to="{ name: 'people.edit', params: { id: this.person.id }}" class="btn btn-success">
+        <router-link :to="{ name: 'people.edit', params: { id: this.person.id }}" class="btn btn-outline-success">
             Редактировать
         </router-link>
     </div>
