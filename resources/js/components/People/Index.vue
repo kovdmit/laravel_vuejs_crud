@@ -15,7 +15,9 @@
             <template v-for="person in people">
                 <tr>
                     <th scope="row">{{ person.id }}</th>
-                    <td>{{ person.name }}</td>
+                    <td><router-link :to="{name:'people.show', params: {id: person.id}}" class="text-decoration-none">
+                        {{ person.name }}
+                    </router-link></td>
                     <td>{{ person.age }}</td>
                     <td>{{ person.job }}</td>
                     <td>
