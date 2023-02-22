@@ -1,10 +1,10 @@
 <template>
-    <p>This is PostComponent</p>
+
 </template>
 
 <script>
 export default {
-    name: "PostComponent"
+    name: "Index"
 }
 </script>
 
