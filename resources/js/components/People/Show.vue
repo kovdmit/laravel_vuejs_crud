@@ -1,5 +1,7 @@
 <template>
-
+    <div class="my-4">
+        Show
+    </div>
 </template>
 
 <script>

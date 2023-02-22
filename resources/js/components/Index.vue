@@ -1,11 +1,19 @@
 <template>
-    <router-link to=""></router-link>
+    <Navigation></Navigation>
     <router-view></router-view>
 </template>
 
 <script>
+import Navigation from "./Navigation.vue";
+
 export default {
-    name: "Index"
+    name: "Index",
+    components: {Navigation},
+    data() {
+        return {}
+    },
+    mounted() {
+    }
 }
 </script>
 
