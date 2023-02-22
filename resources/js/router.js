@@ -12,6 +12,16 @@ const routes = [
         component: () => import('./components/People/Create.vue'),
         name: 'people.create'
     },
+    {
+        path: '/:id/edit',
+        component: () => import('./components/People/Edit.vue'),
+        name: 'people.edit'
+    },
+    {
+        path: '/:id',
+        component: () => import('./components/People/Show.vue'),
+        name: 'people.show'
+    },
 ]
 
 export const router = createRouter({

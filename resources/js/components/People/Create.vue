@@ -36,6 +36,9 @@ export default {
                 .then(res => {
                     router.push({ name: 'people.index' })
                 })
+                .catch(res => {
+                    console.log('Валидация не пройдена')
+                })
         }
     }
 }

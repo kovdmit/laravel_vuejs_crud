@@ -35,7 +35,6 @@ export default {
         getPeople() {
             axios.get('/api/people')
                 .then(res => {
-                    console.log(res)
                     this.people = res.data
                 })
         }
