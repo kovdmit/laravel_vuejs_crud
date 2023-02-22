@@ -1,8 +1,8 @@
 <template>
-    <div class="my-4">
-        <p>Имя: {{ name }}</p>
-        <p>Возраст: {{ age }}</p>
-        <p>Должность: {{ job }}</p>
+    <div class="my-4" v-if="person">
+        <p>Имя: {{ this.person.name }}</p>
+        <p>Возраст: {{ this.person.age }}</p>
+        <p>Должность: {{ this.person.job }}</p>
     </div>
 </template>
 
@@ -11,9 +11,7 @@ export default {
     name: "Show",
     data() {
         return {
-            name: null,
-            age: null,
-            job: null
+            person: null
         }
     },
     mounted() {
@@ -23,9 +21,7 @@ export default {
         getPerson() {
             axios.get(`/api/people/${this.$route.params.id}`)
                 .then(res => {
-                    this.name = res.data.name
-                    this.age = res.data.age
-                    this.job = res.data.job
+                    this.person = res.data
                 })
         }
     }
