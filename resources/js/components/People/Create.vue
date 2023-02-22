@@ -12,15 +12,13 @@
                 <input type="text" v-model="job" placeholder="Должность" class="form-control">
             </div>
             <div class="my-3">
-                <input @click.prevent="store" class="btn btn-primary" type="submit" value="Добавить">
+                <input :disabled="!isDisabled" @click.prevent="store" class="btn btn-primary" type="submit" value="Добавить">
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import {router} from "../../router";
-
 export default {
     name: "Create",
     data() {
@@ -34,11 +32,16 @@ export default {
         store() {
             axios.post('/api/people', {name: this.name, age: this.age, job: this.job})
                 .then(res => {
-                    router.push({ name: 'people.index' })
+                    this.$router.push({ name: 'people.index' })
                 })
                 .catch(res => {
                     console.log('Валидация не пройдена')
                 })
+        },
+    },
+    computed: {
+        isDisabled() {
+            return this.name && this.age && this.job
         }
     }
 }
