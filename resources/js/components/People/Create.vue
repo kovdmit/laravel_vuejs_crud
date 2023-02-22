@@ -11,7 +11,7 @@
             <div class="my-1">
                 <input type="text" v-model="job" placeholder="Должность" class="form-control">
             </div>
-            <div class="my-1">
+            <div class="my-3">
                 <input @click.prevent="store" class="btn btn-primary" type="submit" value="Добавить">
             </div>
         </div>
